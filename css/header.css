@@ -67,7 +67,9 @@
 .btn-register:active {
   color: var(--almost-Black);
   font-weight: 500;
-  border: 3px solid var(--almost-Black);
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--almost-Black);
 }
 
 /* dropdown menu */
