@@ -4,153 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
-      rel="stylesheet"
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/images/favicon-32x32.png"
     />
-
-    <!-- css -->
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/hero.css" />
-    <link rel="stylesheet" href="css/queries.css" />
-    <title>Hero Component</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Frontendmentor | Intro section</title>
   </head>
   <body>
     <header class="header">
-      <div class="nav-container">
-        <nav class="nav">
-          <h1 class="logo"><a href="#">snap</a></h1>
-          <ul class="nav-link-item">
-            <li class="link-item-features link-display">
-              <a href="#" class="link-item-display">Features</a>
-              <img src="images/icon-arrow-down.svg" alt="icon arrow down" />
-              <ul class="dropdown-menu-features">
-                <li>
-                  <div>
-                    <img
-                      src="images/icon-todo.svg"
-                      alt="box with the color of violet"
-                    />
-                  </div>
-                  <div>
-                    <a href="#">Todo List</a>
-                  </div>
+      <nav class="nav">
+        <img src="./assets/images/logo.svg" alt="snap" />
+        <ul class="nav__menuitems">
+          <div class="nav__submenu">
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--features">features</a>
+            </li>
+            <img src="./assets/images/icon-arrow-down.svg" alt="arrow" />
+            <div class="nav__subitem nav__subitem--features">
+              <ul>
+                <li class="nav__item">
+                  <img src="./assets/images/icon-todo.svg" alt="todo" />
+                  <a href="#" class="nav__link">Todo List</a>
                 </li>
-                <li>
-                  <div>
-                    <img src="images/icon-calendar.svg" alt="icon calendar" />
-                  </div>
-                  <div>
-                    <a href="#">Calendar</a>
-                  </div>
+                <li class="nav__item">
+                  <img src="./assets/images/icon-calendar.svg" alt="calendar" />
+                  <a href="#" class="nav__link">calendar</a>
                 </li>
-                <li>
-                  <div>
-                    <img src="images/icon-reminders.svg" alt="bell icon" />
-                  </div>
-                  <div>
-                    <a href="#">Reminders</a>
-                  </div>
+                <li class="nav__item">
+                  <img
+                    src="./assets/images/icon-reminders.svg"
+                    alt="reminders"
+                  />
+                  <a href="#" class="nav__link">Reminders</a>
                 </li>
-                <li>
-                  <div>
-                    <img
-                      src="images/icon-planning.svg"
-                      alt="circle with the color of violet"
-                    />
-                  </div>
-                  <div>
-                    <a href="#">Planning</a>
-                  </div>
+                <li class="nav__item">
+                  <img src="./assets/images/icon-planning.svg" alt="planning" />
+                  <a href="#" class="nav__link">Planning</a>
                 </li>
               </ul>
-            </li>
-            <li class="link-item-features link-display">
-              <a href="#" class="link-item-display">Company</a>
-              <img src="images/icon-arrow-down.svg" alt="icon arrow down" />
-
-              <ul class="dropdown-menu-company">
-                <li><a href="#">History</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Blog</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">About</a></li>
-            <li class="mobile-center"><a href="#">Login</a></li>
-            <li class="mobile-center">
-              <a href="#" class="btn-register">Register</a>
-            </li>
-          </ul>
-
-          <!-- mobile nav -->
-          <button class="btn-mobile-nav">
-            <img
-              src="images/icon-menu.svg"
-              alt="hamburger button"
-              class="icon-mobile-nav open-btn"
-            />
-            <img
-              src="images/icon-close-menu.svg"
-              alt="hamburger button"
-              class="icon-mobile-nav close-btn"
-            />
-          </button>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section id="hero-section">
-        <div class="hero-container">
-          <div class="hero-left">
-            <h1 class="hero-title">Make remote work</h1>
-            <p class="hero-description">
-              Get your team sync, no matter your location. Streamline processes,
-              create team rituals, and watch productivity soar.
-            </p>
-
-            <div>
-              <a href="#" class="btn">Learn more</a>
             </div>
-
-            <ul class="hero-featured">
-              <li>
-                <img src="images/client-databiz.svg" alt="databize logo" />
-              </li>
-              <li>
-                <img
-                  src="images/client-audiophile.svg"
-                  alt="audio-phile logo"
-                />
-              </li>
-              <li><img src="images/client-meet.svg" alt="meet logo" /></li>
-              <li><img src="images/client-maker.svg" alt="maker logo" /></li>
-            </ul>
           </div>
-          <div class="hero-right">
-            <picture>
-              <source
-                media="(max-width: 592px)"
-                srcset="images/image-hero-mobile.png"
-                class="hero-img"
-              />
-              <img
-                src="images/image-hero-desktop.png"
-                alt="men holding his laptop"
-                class="hero-img"
-              />
-            </picture>
+          <div class="nav__submenu">
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--company">company</a>
+              <div class="nav__subitem nav__subitem--company">
+                <ul>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">history</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">our team</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">blog</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <img src="./assets/images/icon-arrow-down.svg" alt="arrow" />
           </div>
-        </div>
-      </section>
-    </main>
-    <div class="overlay hidden"></div>
-
-    <script src="script.js"></script>
+          <li class="nav__item"><a href="#" class="nav__link">careers</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">about</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">login</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">register</a></li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>
