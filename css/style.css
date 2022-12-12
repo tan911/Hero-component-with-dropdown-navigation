@@ -76,68 +76,139 @@ h6 {
   font-family: cusTomFontBold;
   src: url("/assets/font/Epilogue-Bold.ttf"); }
 
+html,
+body {
+  overflow-x: hidden; }
+
 body {
   background-color: #fafafa;
   font-family: customFontMedium, sans-serif;
   min-height: 100vh; }
 
-.header {
-  border: 1px solid red;
-  width: 100%;
-  max-width: 87rem;
-  margin: 0 auto; }
+button {
+  color: dimgray;
+  background: none;
+  border: none;
+  display: inline-block;
+  text-transform: capitalize;
+  padding: 0;
+  cursor: pointer; }
 
-.nav {
+.header {
   width: 100%;
-  padding: 2em 1em;
-  display: inline-flex; }
-  .nav__menuitems {
-    width: 100%;
-    list-style-type: none;
+  max-width: 87.5rem;
+  margin: 0 auto;
+  padding: 1.5em 1em;
+  display: flex;
+  align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      justify-content: space-between;
+      position: relative; } }
+
+.menu {
+  width: 100%;
+  color: dimgray; }
+
+.menu__button {
+  padding: 0.5rem;
+  display: none; }
+  @media only screen and (max-width: 37.5em) {
+    .menu__button {
+      display: block; } }
+
+.menu__list {
+  width: 100%;
+  list-style-type: none;
+  z-index: 100;
+  display: flex;
+  align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .menu__list {
+      display: block;
+      padding: 1rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100vh;
+      box-shadow: 0 1rem 1.5rem rgba(20, 20, 20, 0.2);
+      transform: translateX(140%);
+      transition: all 0.5s ease-in;
+      /* 1) Hide it visually */
+      opacity: 0;
+      /* 2) Make it unaccessible to mouse and keyboard */
+      pointer-events: none;
+      /* 3) Hide it from screen readers */
+      visibility: none; } }
+
+@media only screen and (max-width: 37.5em) {
+  .menu__open .menu__button--toggle {
+    opacity: 0;
+    z-index: -10; }
+  .menu__open .menu__button--close {
     display: flex;
-    align-items: center;
-    gap: 2rem;
-    text-transform: capitalize; }
-  .nav__submenu {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; }
-  .nav__subitem {
-    background-color: #fff;
-    box-shadow: 1em 1rem 1.5rem rgba(20, 20, 20, 0.2);
-    padding: 1.5em;
-    border-radius: 10px;
-    position: absolute; }
-    .nav__subitem--features {
-      top: 40px;
-      right: 0; }
-      .nav__subitem--features ul {
-        padding: 0; }
-      .nav__subitem--features li {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-        width: 130px; }
-        .nav__subitem--features li:not(:last-child) {
-          margin-bottom: 0.8em; }
-      .nav__subitem--features a {
-        color: red;
-        align-self: flex-start; }
-    .nav__subitem--company {
-      top: 40px; }
-      .nav__subitem--company ul {
-        padding: 0; }
-      .nav__subitem--company li {
-        list-style-type: none;
-        width: 100px; }
-  .nav__item {
-    padding: 0 0.5em;
-    cursor: pointer; }
-    .nav__item:nth-child(5) {
-      margin-left: auto; }
-  .nav__link {
-    color: dimgray;
-    display: inline-block;
-    text-decoration: none; }
+    margin-left: auto; }
+  .menu__open .menu__close {
+    display: block; }
+  .menu__open .menu__list {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0); } }
+
+.menu__item {
+  margin-bottom: 1rem;
+  position: relative;
+  text-transform: capitalize; }
+  .menu__item:nth-child(6) {
+    margin-left: auto; }
+  .menu__item:not(:last-child) {
+    margin-right: 1.5rem; }
+
+.menu__sublist {
+  position: absolute;
+  background-color: #fff;
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  list-style-type: none;
+  box-shadow: 1rem 1rem 1.5rem rgba(20, 20, 20, 0.2);
+  border-radius: 10px;
+  display: none; }
+  @media only screen and (max-width: 37.5em) {
+    .menu__sublist {
+      display: none;
+      position: static;
+      box-shadow: none;
+      padding: 0 0 0 2.5rem;
+      border-radius: 0;
+      background-color: #fafafa; } }
+  .menu__sublist--features {
+    right: 0;
+    width: 11rem; }
+  .menu__sublist--company {
+    width: 9rem; }
+
+.menu__sub__open .menu__sublist {
+  display: block; }
+
+.menu__item__sublist {
+  display: flex;
+  align-items: center;
+  gap: 1em; }
+  .menu__item__sublist:not(:last-child) {
+    margin-bottom: 0.5rem; }
+
+.menu__item__submenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 0.5rem; }
+
+.menu__item__link {
+  padding: 0.2rem 0.5rem;
+  width: 100%;
+  display: inline-block;
+  color: dimgray;
+  text-decoration: none; }

@@ -10,65 +10,153 @@
       href="/assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="./js/script.js"></script>
     <title>Frontendmentor | Intro section</title>
   </head>
   <body>
     <header class="header">
-      <nav class="nav">
-        <img src="./assets/images/logo.svg" alt="snap" />
-        <ul class="nav__menuitems">
-          <div class="nav__submenu">
-            <li class="nav__item">
-              <a href="#" class="nav__link nav__link--features">features</a>
-            </li>
-            <img src="./assets/images/icon-arrow-down.svg" alt="arrow" />
-            <div class="nav__subitem nav__subitem--features">
-              <ul>
-                <li class="nav__item">
-                  <img src="./assets/images/icon-todo.svg" alt="todo" />
-                  <a href="#" class="nav__link">Todo List</a>
-                </li>
-                <li class="nav__item">
-                  <img src="./assets/images/icon-calendar.svg" alt="calendar" />
-                  <a href="#" class="nav__link">calendar</a>
-                </li>
-                <li class="nav__item">
-                  <img
-                    src="./assets/images/icon-reminders.svg"
-                    alt="reminders"
-                  />
-                  <a href="#" class="nav__link">Reminders</a>
-                </li>
-                <li class="nav__item">
-                  <img src="./assets/images/icon-planning.svg" alt="planning" />
-                  <a href="#" class="nav__link">Planning</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="nav__submenu">
-            <li class="nav__item">
-              <a href="#" class="nav__link nav__link--company">company</a>
-              <div class="nav__subitem nav__subitem--company">
-                <ul>
-                  <li class="nav__item">
-                    <a href="#" class="nav__link">history</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#" class="nav__link">our team</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#" class="nav__link">blog</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <img src="./assets/images/icon-arrow-down.svg" alt="arrow" />
-          </div>
-          <li class="nav__item"><a href="#" class="nav__link">careers</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">about</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">login</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">register</a></li>
+      <img src="./assets/images/logo.svg" alt="logo" />
+      <nav class="menu">
+        <button
+          class="menu__button menu__button--toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-list"
+        >
+          <svg
+            class="menu__open"
+            role="img"
+            width="32"
+            height="18"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-labelledby="title"
+          >
+            <g fill="#151515" fill-rule="evenodd">
+              <title id="title">Open toggle menu</title>
+              <path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z" />
+            </g>
+          </svg>
+        </button>
+        <ul id="nav-list" class="menu__list">
+          <button
+            class="menu__button menu__button--close"
+            type="button"
+            aria-expanded="false"
+          >
+            <svg
+              class="menu__close"
+              role="img"
+              width="26"
+              height="26"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-labelledby="title"
+            >
+              <g fill="#151515" fill-rule="evenodd">
+                <title id="title">Close</title>
+                <path d="m2.393.98 22.628 22.628-1.414 1.414L.979 2.395z" />
+                <path d="M.98 23.607 23.609.979l1.414 1.414L2.395 25.021z" />
+              </g>
+            </svg>
+          </button>
+          <li class="menu__item">
+            <button
+              class="menu__item__submenu"
+              type="button"
+              aria-expanded="false"
+              aria-controls="sublist1"
+            >
+              features
+              <svg
+                role="img"
+                width="10"
+                height="6"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-labelledby="arrow"
+              >
+                <title id="arrow">arrow</title>
+                <path
+                  stroke="#686868"
+                  stroke-width="1.5"
+                  fill="none"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </button>
+            <ul
+              id="sublist1"
+              role="list"
+              class="menu__sublist menu__sublist--features"
+            >
+              <li class="menu__item__sublist" role="listitem">
+                <img src="./assets/images/icon-todo.svg" alt="todo" />
+                <a class="menu__item__link" href="#">todo list</a>
+              </li>
+              <li class="menu__item__sublist" role="listitem">
+                <img src="./assets/images/icon-calendar.svg" alt="calendar" />
+                <a class="menu__item__link" href="#">calendar</a>
+              </li>
+              <li class="menu__item__sublist" role="listitem">
+                <img src="./assets/images/icon-reminders.svg" alt="reminders" />
+                <a class="menu__item__link" href="#">reminders</a>
+              </li>
+              <li class="menu__item__sublist" role="listitem">
+                <img src="./assets/images/icon-planning.svg" alt="planning" />
+                <a class="menu__item__link" href="#">planning</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <button
+              class="menu__item__submenu"
+              type="button"
+              aria-expanded="false"
+              aria-controls="sublist2"
+            >
+              company
+              <svg
+                role="img"
+                width="10"
+                height="6"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-labelledby="arrow"
+              >
+                <title id="arrow">arrow</title>
+                <path
+                  stroke="#686868"
+                  stroke-width="1.5"
+                  fill="none"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </button>
+            <ul
+              id="sublist2"
+              role="list"
+              class="menu__sublist menu__sublist--company"
+            >
+              <li class="menu__item__sublist" role="listitem">
+                <a class="menu__item__link" href="#">history</a>
+              </li>
+              <li class="menu__item__sublist" role="listitem">
+                <a class="menu__item__link" href="#">our team</a>
+              </li>
+              <li class="menu__item__sublist" role="listitem">
+                <a class="menu__item__link" href="#">blog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="#">careers</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="#">about</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="#">login</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="#">register</a>
+          </li>
         </ul>
       </nav>
     </header>

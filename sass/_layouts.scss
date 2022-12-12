@@ -1,0 +1,172 @@
+.header {
+  width: 100%;
+  max-width: 87.5rem;
+  margin: 0 auto;
+  padding: 1.5em 1em;
+  display: flex;
+  align-items: center;
+  // border: 1px solid blue;
+
+  @include respond(phone) {
+    justify-content: space-between;
+    position: relative;
+  }
+}
+
+.menu {
+  //   border: 1px solid red;
+  width: 100%;
+  color: $color-secondary;
+}
+
+.menu__button {
+  padding: 0.5rem;
+  display: none;
+  //   border: 1px solid lime;
+
+  @include respond(phone) {
+    display: block;
+  }
+}
+
+.menu__list {
+  width: 100%;
+  list-style-type: none;
+  // padding: 2em 0;
+  // border: 1px solid lime;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+
+  //   display: none;
+
+  @include respond(phone) {
+    display: block;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    box-shadow: 0 1rem 1.5rem rgba($color-tertiary, 0.2);
+    transform: translateX(140%);
+    transition: all 0.5s ease-in;
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: none;
+  }
+}
+
+// DROPDOWN IN MOBILE SCREEN
+.menu__open {
+  // border: 1px solid red;
+
+  @include respond(phone) {
+    & .menu__button--toggle {
+      opacity: 0;
+      z-index: -10;
+    }
+
+    & .menu__button--close {
+      display: flex;
+      margin-left: auto;
+      //   margin-bottom: 2rem;
+    }
+
+    & .menu__close {
+      display: block;
+    }
+
+    & .menu__list {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+}
+
+.menu__item {
+  margin-bottom: 1rem;
+  position: relative;
+  text-transform: capitalize;
+  //   border: 1px solid red;
+
+  &:nth-child(6) {
+    margin-left: auto;
+  }
+
+  &:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+}
+
+.menu__sublist {
+  position: absolute;
+  background-color: #fff;
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  list-style-type: none;
+  box-shadow: 1rem 1rem 1.5rem rgba($color-tertiary, 0.2);
+  border-radius: 10px;
+  //   border: 1px solid blue;
+  display: none;
+
+  @include respond(phone) {
+    display: none;
+    position: static;
+    box-shadow: none;
+    padding: 0 0 0 2.5rem;
+    border-radius: 0;
+    background-color: $color-primary;
+  }
+
+  &--features {
+    right: 0;
+    width: 11rem;
+  }
+
+  &--company {
+    width: 9rem;
+  }
+}
+
+// DROPDOWN IN MOBILE SCREEN
+.menu__sub__open .menu__sublist {
+  display: block;
+}
+
+.menu__item__sublist {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.menu__item__submenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 0.5rem;
+  //   border: 1px solid red;
+}
+
+.menu__item__link {
+  //   border: 1px solid red;
+  padding: 0.2rem 0.5rem;
+  width: 100%;
+
+  display: inline-block;
+  color: $color-secondary;
+  text-decoration: none;
+}
