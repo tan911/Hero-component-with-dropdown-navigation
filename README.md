@@ -10,6 +10,9 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#Useful-resources)
+- [Author](#author)
 
 ## Overview
 
@@ -35,7 +38,21 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- CSS
 - Flexbox
-- CSS Grid
 - Desktop-first workflow
+- Sass/SCSS
+- BEM
+
+### What I learned
+
+I've learn building an accessible navigation using a disclosure pattern. Thanks to fronendmentor community who suggested this pattern, also I make some research about disclosure navigation menu in W3C Web Accessiblity Initiative(WAI) where they give all the details.
+
+### Useful resources
+
+- [disclosure navigation menu](https://www.w3.org/WAI/ARIA/apg/example-index/disclosure/disclosure-navigation.html) - building an accessible navigation menu.
+
+## Author
+
+- Website - [Jovan Lanutan](https://portfolio-tan911.vercel.app/)
+- Frontend Mentor - [@tan](https://www.frontendmentor.io/profile/tan911)
