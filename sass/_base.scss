@@ -87,9 +87,25 @@ $color-primary: hsl(0, 0%, 98%);
 $color-secondary: hsl(0, 0%, 41%);
 $color-tertiary: hsl(0, 0%, 8%);
 
+// QUERIES
 @mixin respond($breakpoint) {
+  // 600px
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  // 900px
+  @if $breakpoint == laptop-portrait {
+    @media only screen and(max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  // 1200px
+  @if $breakpoint == laptop-landscape {
+    @media only screen and (max-width: 75em) {
       @content;
     }
   }
