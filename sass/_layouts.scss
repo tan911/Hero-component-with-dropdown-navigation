@@ -1,3 +1,6 @@
+//////////////////
+// HEADER
+
 .header {
   width: 100%;
   max-width: 87.5rem;
@@ -5,16 +8,15 @@
   padding: 1.5em 1em;
   display: flex;
   align-items: center;
-  // border: 1px solid blue;
 
   @include respond(phone) {
     justify-content: space-between;
+    flex-direction: row;
     position: relative;
   }
 }
 
 .menu {
-  //   border: 1px solid red;
   width: 100%;
   color: $color-secondary;
 }
@@ -22,25 +24,21 @@
 .menu__button {
   padding: 0.5rem;
   display: none;
-  //   border: 1px solid lime;
 
-  @include respond(phone) {
+  @include respond(laptop-portrait) {
     display: block;
+    margin-left: auto;
   }
 }
 
 .menu__list {
   width: 100%;
   list-style-type: none;
-  // padding: 2em 0;
-  // border: 1px solid lime;
   z-index: 100;
   display: flex;
   align-items: center;
 
-  //   display: none;
-
-  @include respond(phone) {
+  @include respond(laptop-portrait) {
     display: block;
     padding: 1rem;
     position: absolute;
@@ -48,6 +46,7 @@
     right: 0;
     width: 60%;
     height: 100vh;
+    background-color: #fff;
     box-shadow: 0 1rem 1.5rem rgba($color-tertiary, 0.2);
     transform: translateX(140%);
     transition: all 0.5s ease-in;
@@ -67,7 +66,7 @@
 .menu__open {
   // border: 1px solid red;
 
-  @include respond(phone) {
+  @include respond(laptop-portrait) {
     & .menu__button--toggle {
       opacity: 0;
       z-index: -10;
@@ -76,7 +75,6 @@
     & .menu__button--close {
       display: flex;
       margin-left: auto;
-      //   margin-bottom: 2rem;
     }
 
     & .menu__close {
@@ -96,7 +94,13 @@
   margin-bottom: 1rem;
   position: relative;
   text-transform: capitalize;
-  //   border: 1px solid red;
+
+  @include respond(phone) {
+    &:nth-child(6) {
+      width: 100%;
+      text-align: center;
+    }
+  }
 
   &:nth-child(6) {
     margin-left: auto;
@@ -115,16 +119,15 @@
   list-style-type: none;
   box-shadow: 1rem 1rem 1.5rem rgba($color-tertiary, 0.2);
   border-radius: 10px;
-  //   border: 1px solid blue;
   display: none;
 
-  @include respond(phone) {
+  @include respond(laptop-portrait) {
     display: none;
     position: static;
     box-shadow: none;
     padding: 0 0 0 2.5rem;
     border-radius: 0;
-    background-color: $color-primary;
+    background-color: #fff;
   }
 
   &--features {
@@ -158,15 +161,103 @@
   align-items: center;
   gap: 1em;
   padding: 0.5rem;
-  //   border: 1px solid red;
 }
 
 .menu__item__link {
-  //   border: 1px solid red;
+  // font-size: clamp(0.938rem, calc(0.375vw + 0.797rem), 1.125rem);
+  font-size: 1rem;
   padding: 0.2rem 0.5rem;
   width: 100%;
 
   display: inline-block;
   color: $color-secondary;
   text-decoration: none;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $color-tertiary;
+  }
+}
+
+//////////////////
+// MAIN
+
+.main {
+  width: 100%;
+  max-width: 71.875rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 8rem;
+
+  @include respond(laptop-landscape) {
+    width: 95%;
+    gap: 5rem;
+  }
+
+  @include respond(laptop-portrait) {
+    width: 90%;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+    gap: 3rem;
+  }
+}
+
+.main__info__container {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+
+  @include respond(phone) {
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+  }
+}
+
+.main__title {
+  font-size: clamp(2rem, calc(6vw + 0.25rem), 5rem);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 3rem;
+
+  @include respond(phone) {
+    margin-bottom: 1rem;
+  }
+}
+
+.main__message {
+  width: 80%;
+  font-size: clamp(0.938rem, calc(0.375vw + 0.797rem), 1.125rem);
+  color: $color-secondary;
+  margin-bottom: 2.5rem;
+
+  @include respond(phone) {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.main__img__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+
+  & img {
+    width: 70%;
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+}
+
+.main__img {
+  width: 25%;
 }
