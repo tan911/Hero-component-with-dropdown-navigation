@@ -15,7 +15,7 @@
   </head>
   <body>
     <header class="header">
-      <img src="./assets/images/logo.svg" alt="logo" />
+      <img class="logo" src="./assets/images/logo.svg" alt="logo" />
       <nav class="menu">
         <button
           class="menu__button menu__button--toggle"
@@ -75,6 +75,7 @@
               >
                 <title id="arrow">arrow</title>
                 <path
+                  class="arrow"
                   stroke="#686868"
                   stroke-width="1.5"
                   fill="none"
@@ -122,6 +123,7 @@
               >
                 <title id="arrow">arrow</title>
                 <path
+                  class="arrow"
                   stroke="#686868"
                   stroke-width="1.5"
                   fill="none"
@@ -155,10 +157,52 @@
             <a class="menu__item__link" href="#">login</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item__link" href="#">register</a>
+            <button class="menu__btn__register" type="button">register</button>
           </li>
         </ul>
       </nav>
     </header>
+    <main class="main">
+      <picture>
+        <source
+          media="(max-width: 900px)"
+          srcset="./assets/images/image-hero-mobile.png"
+        />
+        <source
+          media="(min-width: 650px)"
+          srcset="./assets/images/image-hero-desktop.png"
+        />
+        <img
+          src="./assets/images/image-hero-desktop.png"
+          alt="man with a laptop"
+        />
+      </picture>
+      <div class="main__info__container">
+        <h1 class="main__title">Make remote work</h1>
+        <p class="main__message">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button class="main__btn__learnmore">Learn more</button>
+        <div class="main__img__container">
+          <div class="main__img">
+            <img src="./assets/images/client-databiz.svg" alt="databiz" />
+          </div>
+          <div class="main__img">
+            <img
+              src="./assets/images/client-audiophile.svg"
+              alt="audio phile"
+            />
+          </div>
+          <div class="main__img">
+            <img src="./assets/images/client-meet.svg" alt="meet" />
+          </div>
+          <div class="main__img">
+            <img src="./assets/images/client-maker.svg" alt="maker" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="overlay hidden"></div>
   </body>
 </html>
