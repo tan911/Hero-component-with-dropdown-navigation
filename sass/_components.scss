@@ -1,9 +1,60 @@
+.menu__btn__register {
+  border: 1px solid $color-tertiary;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+
+  @include respond(phone) {
+    width: 100%;
+  }
+}
+
+.main__btn__learnmore {
+  align-self: flex-start;
+  color: $color-primary;
+  background-color: $color-tertiary;
+  font-weight: bold;
+  margin-bottom: 5.5rem;
+  padding: 0.7em 1.5em;
+  border-radius: 10px;
+  border: 1px solid $color-tertiary;
+  transition: all 0.3s;
+
+  @include respond(phone) {
+    align-self: center;
+    margin-bottom: 2.5rem;
+  }
+
+  &:hover {
+    background: none;
+  }
+}
+
 button {
+  font-size: clamp(0.938rem, calc(0.375vw + 0.797rem), 1.125rem);
   color: $color-secondary;
   background: none;
   border: none;
   display: inline-block;
-  text-transform: capitalize;
   padding: 0;
+  text-transform: capitalize;
   cursor: pointer;
+
+  &:hover {
+    color: $color-tertiary;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1px);
+  z-index: 5;
 }
